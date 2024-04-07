@@ -15,3 +15,7 @@
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 
 This repository is used to experiment the limitation of llm agent flow
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)

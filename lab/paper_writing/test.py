@@ -1,0 +1,3 @@
+from langchain_community.document_loaders import _module_lookup
+from pprint import pprint
+pprint(_module_lookup)

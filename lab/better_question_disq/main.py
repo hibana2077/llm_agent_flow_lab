@@ -2,7 +2,7 @@
 Author: hibana2077 hibana2077@gmail.com
 Date: 2024-04-07 23:39:59
 LastEditors: hibana2077 hibana2077@gmail.com
-LastEditTime: 2024-04-08 10:56:49
+LastEditTime: 2024-04-08 17:59:58
 FilePath: \llm_agent_flow_lab\lab\better_question_disq\main.py
 Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 '''
@@ -27,6 +27,7 @@ def main():
     logger.info("Init ChatGroq")
     logger.info("API_KEY: {}".format(CHATGROQ_API_KEY))
     llm = ChatGroq(api_key=CHATGROQ_API_KEY)
+    llm2 = ChatGroq(api_key=CHATGROQ_API_KEY, model="llama2-70b-4096")
     logger.info("Init ChatPromptTemplate")
     prompt1 = ChatPromptTemplate.from_messages([
         ('system', "You are a helpful AI assistant who can answer questions about any topic. Please answer the following question:"),
@@ -46,7 +47,7 @@ def main():
         prompt2_copy = prompt2.copy()
         prompt2_copy.append(AIMessage(response1.content))
         tmp_response = response1.content
-        chain2 = prompt2_copy | llm
+        chain2 = prompt2_copy | llm2
         response2:AIMessage = chain2.invoke({})
         if response2.content.startswith("Yes") or response2.content.startswith("yes"):
             logger.info("AI: {}".format(tmp_response))

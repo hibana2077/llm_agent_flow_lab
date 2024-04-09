@@ -2,7 +2,7 @@
  * @Author: hibana2077 hibana2077@gmail.com
  * @Date: 2024-04-08 22:19:03
  * @LastEditors: hibana2077 hibana2077@gmail.com
- * @LastEditTime: 2024-04-08 22:35:39
+ * @LastEditTime: 2024-04-09 08:55:46
  * @FilePath: \llm_agent_flow_lab\lab\brain_stroming\note.md
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -22,8 +22,7 @@ unconventional and novel ideas, allowing participants to build upon the suggesti
 avenues of inquiry while withholding judgment or critique. The process enables agents to apply their domain
 knowledge and resources to form a collective idea pool. This pool can then be distilled and examined more
 thoroughly. To foster divergent thinking and creativity, it can be beneficial for agents to specialize in areas
-of biology, for instance, microglia biology, neuronal degeneration, and neuroinflammation in the case of a
-multi-agent system for Alzheimer’s.
+of biology, for instance, microglia biology, neuronal degeneration, and neuroinflammation in the case of a multi-agent system for Alzheimer’s.
 
 ## Implementation
 
@@ -33,3 +32,8 @@ We Implement the Brainstorming Agent using the following tech stacks:
 - [ ] FAISS
 - [ ] MongoDB
 - [ ] Docker
+
+### Idea Generation and Idea pool
+
+- provide a lot of single concepts, and randomly combine them to generate new ideas
+- build a concept relationship graph, and pick a random node to generate new ideas
